@@ -180,14 +180,21 @@ After launching the Gazebo simulation, open a new terminal.
 
 ### Step 1: Launch Nav2
 
+Source ROS 2 and your workspace:
+
 ```bash
 source /opt/ros/jazzy/setup.bash
 
 source ~/ros2_ws/install/setup.bash
+```
 
+Launch the Nav2 navigation stack:
+
+```bash
 ros2 launch nav2_bringup bringup_launch.py use_sim_time:=True map:=~/ros2_ws/src/maps/my_robot_map.yaml
+```
 
-Nav2 provides the autonomous navigation capabilities, including localization, global and local path planning, and obstacle avoidance.
+Nav2 provides autonomous navigation capabilities, including localization, global and local path planning, and obstacle avoidance.
 
 ### Step 2: Launch RViz2
 
@@ -199,23 +206,23 @@ source /opt/ros/jazzy/setup.bash
 ros2 run rviz2 rviz2 -d ~/ros2_ws/src/config_nav/config_nav.rviz
 ```
 
-RViz2 provides visualization of the map, robot position, laser scans and planned navigation paths.
+RViz2 visualizes the map, robot position, LiDAR data, planned paths and navigation goals.
 
 ### Step 3: Set the Initial Pose
 
-1. Open RViz2.
-2. Select the **2D Pose Estimate** tool.
-3. Set the robot's initial position and orientation on the map.
+1. Select **2D Pose Estimate** in RViz2.
+2. Click the robot's actual initial position on the map.
+3. Set its orientation.
 4. Wait for localization to converge.
 
 ### Step 4: Send a Navigation Goal
 
 1. Select **2D Goal Pose** in RViz2.
-2. Click the desired destination on the map.
+2. Click the desired destination.
 3. Set the target orientation.
-4. Observe the robot planning its path and moving toward the destination.
+4. Observe the robot autonomously navigating toward the destination using Nav2.
 
-The robot uses Nav2 to plan and execute its navigation while responding to obstacles detected by its sensors.
+The robot uses its sensor data, localization and path-planning algorithms to navigate through the simulated environment.
 
 ## Navigation Workflow
 
