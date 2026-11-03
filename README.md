@@ -117,7 +117,6 @@ ros2-autonomous-mobile-robot/
 - Colcon build tools
 
 ## Installation
-![Uploading Screenshot from 2026-11-03 16-08-31.png…]()
 
 ### 1. Install ROS 2 dependencies
 
