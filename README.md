@@ -174,6 +174,8 @@ ros2 launch my_robot_bringup my_robot_gazebo.launch.xml
 
 This launches the robot simulation in Gazebo.
 
+![mobile_robot](./nav_close.png)
+
 ## Autonomous Navigation
 
 After launching the Gazebo simulation, open a new terminal.
@@ -262,7 +264,8 @@ Reach Destination
 
 ## Demo and Screenshots
 
-Screenshots and demonstration videos of the Gazebo simulation and autonomous navigation will be added here.
+![mobile_robot](./nav_top.png)
+![navigation_image](./navigation_s.png)
 
 ## Future Improvements
 
